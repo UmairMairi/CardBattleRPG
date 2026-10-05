@@ -82,6 +82,13 @@ android {
 }
 
 dependencies {
+
+    // Tiktok
+    implementation 'com.github.tiktok:tiktok-business-android-sdk:1.5.0'
+    implementation 'androidx.lifecycle:lifecycle-process:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.3.1'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+
     // Compose
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
