@@ -31,3 +31,8 @@
 # Keep readable crash stack traces in Play Console (upload mapping.txt automatically via AAB).
 -keepattributes SourceFile,LineNumberTable
 -renamesourcefileattribute SourceFile
+
+# Tiktok
+-keep class com.tiktok.** { *; }
+-keep class com.android.billingclient.api.** { *; }
+-keep class androidx.lifecycle.** { *; }
