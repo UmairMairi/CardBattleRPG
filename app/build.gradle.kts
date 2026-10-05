@@ -60,10 +60,10 @@ android {
                 signingConfig = signingConfigs.getByName("release")
             }
         }
-    }
 
-    buildFeatures {
-        compose = true
+        buildFeatures {
+            compose = true
+        }
     }
 
     // 16 KB page-size support (required by Google Play for Android 15+ targets):
