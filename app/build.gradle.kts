@@ -1,5 +1,14 @@
 import java.util.Properties
 
+allprojects {
+    apply plugin: 'idea'
+    repositories {
+        mavenCentral()
+        google()
+        maven { url 'https://jitpack.io' } // add this line!!
+        jcenter()
+    }
+}
 
 plugins {
     alias(libs.plugins.android.application)
