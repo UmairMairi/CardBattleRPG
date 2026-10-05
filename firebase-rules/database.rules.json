@@ -1,0 +1,35 @@
+{
+  "rules": {
+    "online_status": {
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    },
+    "matchmaking": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "battle_rooms": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": [
+        "player1Uid",
+        "player2Uid"
+      ]
+    },
+    "guild_chat": {
+      "$guildId": {
+        ".read": "auth != null",
+        ".indexOn": [
+          "uid",
+          "createdAt"
+        ],
+        "$messageId": {
+          ".write": "auth != null && ((!data.exists() && newData.child('uid').val() === auth.uid) || (data.exists() && data.child('uid').val() === auth.uid))",
+          ".validate": "newData.hasChildren(['uid', 'username', 'message', 'createdAt']) && newData.child('message').isString() && newData.child('message').val().length <= 200"
+        }
+      }
+    }
+  }
+}

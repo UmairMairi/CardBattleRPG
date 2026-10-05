@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cards, heroes, enemies, items and audio are loaded by name via getIdentifier(),
+     so the release resource shrinker must not remove them. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/*,@raw/*,@mipmap/*" />

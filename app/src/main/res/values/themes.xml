@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CardBattleRPG" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <!-- Dark window so there is no white flash before Compose draws the first frame. -->
+        <item name="android:windowBackground">@color/game_background</item>
+        <item name="android:colorBackground">@color/game_background</item>
+    </style>
+</resources>
